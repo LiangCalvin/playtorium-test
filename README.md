@@ -35,6 +35,5 @@ This repository contains the code for a discount module implemented using ReactJ
 * HTML
 * CSS
 * JavaScript
-* [Any other relevant technologies]
 
 Thank you for reviewing my project!

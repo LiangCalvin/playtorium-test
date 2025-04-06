@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-// import DiscountCalculator from "./components/DiscountCalculatorOld";
-// import Cart from "./components/Cart";
-import CartX from "./components/Cart";
-import DiscountCalculatorX from "./components/DiscountCalculator";
+import CartX from "./components/Cart/Cart";
+import DiscountCalculatorX from "./components/DiscountCalculator/DiscountCalculator";
 
 type Item = {
   id: string;
@@ -14,8 +12,7 @@ type Item = {
 };
 
 function App() {
-  const [cart, setCart] = useState<Item[]>([]); // Explicitly define the type of cart here
-
+  const [cart, setCart] = useState<Item[]>([]);
 
   return (
     <div>
