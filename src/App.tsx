@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+// import DiscountCalculator from "./components/DiscountCalculatorOld";
+// import Cart from "./components/Cart";
+import CartX from "./components/Cart";
+import DiscountCalculatorX from "./components/DiscountCalculator";
+
+type Item = {
+  id: string;
+  name: string;
+  price: number;
+  category: string;
+  quantity: number;
+};
 
 function App() {
+  const [cart, setCart] = useState<Item[]>([]); // Explicitly define the type of cart here
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CartX cart={cart} setCart={setCart} />
+      <DiscountCalculatorX cart={cart} />
     </div>
   );
 }
